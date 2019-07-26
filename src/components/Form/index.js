@@ -7,7 +7,8 @@ export default class Form extends Component {
     super(props);
     this.state = {
       name: '',
-      email:''
+      email:'',
+      value: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,7 +27,7 @@ export default class Form extends Component {
   }
 
   handleSubmit(event) {
-    alert('A form was submitted: ' + this.state.name + ' // ' + this.state.email);
+    alert('A form was submitted: ' + this.state.name + ' // ' + this.state.email + ' // ' + this.state.value);
     event.preventDefault();
   }
 
@@ -42,6 +43,17 @@ export default class Form extends Component {
             <label htmlFor="emailImput">Email</label>
             <input name="email" type="email" value={this.state.email} onChange={this.handleChange} className="form-control" id="emailImput" placeholder="email@domain.com" />
           </div><br />
+          <label>
+          Pick your favorite flavour: 
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="MARGHERITA">MARGHERITA</option>
+            <option value="FUNGHI	">FUNGHI</option>
+            <option value="TROPICALI">TROPICALI</option>
+            <option value="CARNE">CARNE</option>
+            <option value="POLLO">POLLO</option>
+            <option value="MILANO	">MILANO</option>
+          </select>
+        </label><br/><br/>
           <input type="submit" value="Submit" className="btn btn-primary" />
         </form>
       </div>
