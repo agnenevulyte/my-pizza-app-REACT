@@ -1,22 +1,14 @@
 import React from "react";
+import Title from "../Title";
+import "./styles.css"
 
 export default function Header() {
   return (
     <div>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <Title />
+      <div className="main-image">
+        <img alt="pizza image" src="https://img.taste.com.au/YfX0h9hC/taste/2017/10/mexican-taco-pizza-131640-1.jpg" />
+      </div>
     </div>
   );
 }
