@@ -33,6 +33,12 @@ export default class Form extends Component {
     event.preventDefault();
   }
 
+  // let elem = document.getElementById("selectPizza");
+  elem(){
+    var hiddenDiv = document.getElementById("showMe");
+    hiddenDiv.style.display = (this.value === "") ? "none":"block";
+  };
+
   render() {
     return (
       <div>
@@ -47,7 +53,7 @@ export default class Form extends Component {
           </div><br />
           <label>
           Pick your favorite flavour: <br/><br/>
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select value={this.state.value} onChange={this.handleChange} id="selectPizza">
             <option value="MARGHERITA">MARGHERITA</option>
             <option value="FUNGHI	">FUNGHI</option>
             <option value="TROPICALI">TROPICALI</option>
@@ -58,6 +64,9 @@ export default class Form extends Component {
         </label><br/><br/>
           <input type="submit" value="Submit" className="btn btn-primary" />
         </form>
+
+
+        <div id="showMe">Value Selected</div>
       </div>
     )
   }
