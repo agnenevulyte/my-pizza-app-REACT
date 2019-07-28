@@ -1,1 +1,14 @@
 /* https://codepen.io/ArnaudBalland/pen/vGZKLr */
+
+input[type="submit"] {
+    background-color: white;
+    border-radius: 5px;
+}
+
+select {
+    background-color: white;
+}
+
+label {
+    margin-right: 10px;
+}

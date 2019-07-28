@@ -20,8 +20,10 @@ export default class Form extends Component {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
     
+    
     this.setState({
-      [name]: value
+      [name]: value,
+      value: event.target.value
     });
     console.log('Change detected. State updated' + name + ' = ' + value);
   }
@@ -44,7 +46,7 @@ export default class Form extends Component {
             <input name="email" type="email" value={this.state.email} onChange={this.handleChange} className="form-control" id="emailImput" placeholder="email@domain.com" />
           </div><br />
           <label>
-          Pick your favorite flavour: 
+          Pick your favorite flavour: <br/><br/>
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="MARGHERITA">MARGHERITA</option>
             <option value="FUNGHI	">FUNGHI</option>

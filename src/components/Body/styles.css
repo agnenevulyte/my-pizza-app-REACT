@@ -1,6 +1,6 @@
 .body {
     background-color: rgba(0,0,0,.9);
     color: #c9c9c9;
-    position: absolute;
+    position: static;
     width: 100%;
 }

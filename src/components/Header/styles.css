@@ -1,4 +1,14 @@
-.main-image img {
+.main-image {
     max-width: 500px;
+    margin: 0 auto;
+}
+
+.main-image img {
+    width: 100%;
     border-radius: 5%;
+}
+
+.header-section {
+    background-color: rgba(0,0,0,.9);
+    color: #c9c9c9;
 }
